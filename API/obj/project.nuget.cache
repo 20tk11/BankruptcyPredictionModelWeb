@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/o3Mi4kuzWc4Z3FRAypHwc83Q2Aq/BrMjnUVms6l/oMeAOanM7+ssXcKVKvOWi0dMIke2JJe477Ij6eao8bcMw==",
+  "dgSpecHash": "zdzx8EOAHc2Gm29xRers8/rheSYeL+EX2OjfdVD/1CoN5QRiF8dPkIVlBONl+/UrLM80oHcKbb9O9vwepObZJQ==",
   "success": true,
-  "projectFilePath": "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\API\\API.csproj",
+  "projectFilePath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\api\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Tomas\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Tomas\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\API\\API.csproj": {}
+    "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\api\\API.csproj": {}
   },
   "projects": {
-    "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\API\\API.csproj": {
+    "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\api\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\API\\API.csproj",
+        "projectUniqueName": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\api\\API.csproj",
         "projectName": "API",
-        "projectPath": "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\API\\API.csproj",
+        "projectPath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\api\\API.csproj",
         "packagesPath": "C:\\Users\\Tomas\\.nuget\\packages\\",
-        "outputPath": "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\API\\obj\\",
+        "outputPath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -21,14 +21,15 @@
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\Application.csproj": {
-                "projectPath": "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\Application.csproj"
+              "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\Application.csproj": {
+                "projectPath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\Application.csproj"
               },
               "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Infrastructure\\Infrastructure.csproj": {
                 "projectPath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Infrastructure\\Infrastructure.csproj"
@@ -108,14 +109,14 @@
         }
       }
     },
-    "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\Application.csproj": {
+    "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\Application.csproj",
+        "projectUniqueName": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\Application.csproj",
+        "projectPath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\Tomas\\.nuget\\packages\\",
-        "outputPath": "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\obj\\",
+        "outputPath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -132,8 +133,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\Domain.csproj": {
-                "projectPath": "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\Domain.csproj"
+              "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\Domain.csproj"
               },
               "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Persistence\\Persistence.csproj": {
                 "projectPath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Persistence\\Persistence.csproj"
@@ -188,14 +189,14 @@
         }
       }
     },
-    "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\Domain.csproj": {
+    "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\Domain.csproj",
+        "projectPath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Tomas\\.nuget\\packages\\",
-        "outputPath": "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\obj\\",
+        "outputPath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -273,8 +274,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\Application.csproj": {
-                "projectPath": "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\Application.csproj"
+              "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\Application.csproj": {
+                "projectPath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\Application.csproj"
               }
             }
           }
@@ -332,8 +333,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\Domain.csproj": {
-                "projectPath": "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\Domain.csproj"
+              "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\Domain.csproj"
               }
             }
           }
