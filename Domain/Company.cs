@@ -15,7 +15,7 @@ namespace Domain
         public int BusinessSector { get; set; }
         public int IsBankrupt { get; set; }
         public User User { get; set; }
-        public Guid UserId { get; set; }
+        public string UserId { get; set; }
         public ICollection<Coef> CompanyCoefs { get; set; } = new List<Coef>();
         public int? BankruptcyCaseStartYear { get; set; }
         public DateTime CompanyCreateDate { get; set; }

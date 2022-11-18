@@ -16,7 +16,8 @@ namespace Application.Companies
         public int? DeregistrationYear { get; set; }
         public int BusinessSector { get; set; }
         public int IsBankrupt { get; set; }
-        public Guid UserId { get; set; }
+        public User User { get; set; }
+        public string UserId { get; set; }
         public ICollection<CoefDto> CompanyCoefs { get; set; } = new List<CoefDto>();
         public int? BankruptcyCaseStartYear { get; set; }
         public DateTime CompanyCreateDate { get; set; }

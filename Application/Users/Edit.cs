@@ -16,6 +16,8 @@ namespace Application.Users
         public class Command : IRequest<Result<Unit>>
         {
             public User User { get; set; }
+            public string TokenUserName { get; set; }
+            public string TokenRole { get; set; }
         }
         public class CommandValidator : AbstractValidator<Command>
         {
@@ -38,23 +40,29 @@ namespace Application.Users
             public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
                 var user = await _context.Users.FindAsync(request.User.Id);
-
+                if (request.TokenRole != "Admin")
+                {
+                    if (user.UserName.ToString() != request.TokenUserName)
+                    {
+                        return Result<Unit>.Forbid("");
+                    }
+                }
                 if (user == null) return null;
                 // _mapper.Map(request.User, user);
                 user.Organization = request.User.Organization ?? user.Organization;
                 user.FirstName = request.User.FirstName ?? user.FirstName;
                 user.LastName = request.User.LastName ?? user.LastName;
-                user.EmailAddress = request.User.EmailAddress ?? user.EmailAddress;
-                user.LoginName = request.User.LoginName ?? user.LoginName;
-                user.LoginPassword = request.User.LoginPassword ?? user.LoginPassword;
+                user.Email = request.User.Email ?? user.Email;
+                user.UserName = request.User.UserName ?? user.UserName;
+                user.PasswordHash = request.User.PasswordHash ?? user.PasswordHash;
                 user.PhoneNumber = request.User.PhoneNumber ?? user.PhoneNumber;
                 user.Country = request.User.Country ?? user.Country;
                 user.City = request.User.City ?? user.City;
+                user.Role = request.User.Role ?? user.Role;
 
 
                 var result = await _context.SaveChangesAsync() > 0;
                 if (!result) return Result<Unit>.Failure("Failed to update user");
-                user.UserLastUpdateDate = DateTime.Now;
                 await _context.SaveChangesAsync();
                 // Equivalent to nothing
                 return Result<Unit>.Success(Unit.Value);

@@ -17,6 +17,8 @@ namespace Application.Coefs
         {
             public Coef Coef { get; set; }
             public Guid Id { get; set; }
+            public string TokenUserName { get; set; }
+            public string TokenRole { get; set; }
         }
         public class CommandValidator : AbstractValidator<Command>
         {
@@ -38,6 +40,16 @@ namespace Application.Coefs
             {
 
                 var coef = await _context.Coefs.FindAsync(request.Coef.Id);
+                var company = await _context.Companies.FindAsync(coef.CompanyId);
+                var user = await _context.Users.FindAsync(company.UserId);
+
+                if (request.TokenRole != "Admin")
+                {
+                    if (user.UserName.ToString() != request.TokenUserName)
+                    {
+                        return Result<Unit>.Forbid("");
+                    }
+                }
                 if (coef == null) return Result<Unit>.Failure("Toks koeficientas neegzistuoja");
 
                 if (request.Coef.FinancialYear != 0)

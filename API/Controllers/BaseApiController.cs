@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Application.Core;
+using Domain;
 using MediatR;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -20,7 +22,7 @@ namespace API.Controllers
 
         protected ActionResult HandleResult<T>(Result<T> result)
         {
-            if(result == null) return NotFound();
+            if (result == null) return NotFound();
             if (result.IsSuccess && result.Value != null)
             {
                 return Ok(result.Value);
@@ -28,6 +30,10 @@ namespace API.Controllers
             if (result.IsSuccess && result.Value == null)
             {
                 return NotFound();
+            }
+            if (result.IsForbid)
+            {
+                return Forbid();
             }
             return BadRequest(result.Error);
         }

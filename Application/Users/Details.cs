@@ -9,6 +9,9 @@ using Domain;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
+using System.IdentityModel.Tokens;
+using Microsoft.IdentityModel;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace Application.Users
 {
@@ -16,7 +19,9 @@ namespace Application.Users
     {
         public class Query : IRequest<Result<UserDto>>
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
+            public string TokenUserName { get; set; }
+            public string TokenRole { get; set; }
         }
         public class Handler : IRequestHandler<Query, Result<UserDto>>
         {
@@ -29,7 +34,14 @@ namespace Application.Users
 
             public async Task<Result<UserDto>> Handle(Query request, CancellationToken cancellationToken)
             {
-                // var user = await _context.Users.FindAsync(request.Id);
+                var useris = await _context.Users.FindAsync(request.Id);
+                if (request.TokenRole != "Admin")
+                {
+                    if (useris.UserName.ToString() != request.TokenUserName)
+                    {
+                        return Result<UserDto>.Forbid("");
+                    }
+                }
                 var user = await _context.Users
                 .Where(a => a.Id == request.Id)
                 .Include(a => a.UserCompanies)
@@ -39,14 +51,13 @@ namespace Application.Users
                     Organization = x.Organization,
                     FirstName = x.FirstName,
                     LastName = x.LastName,
-                    EmailAddress = x.EmailAddress,
-                    LoginName = x.LoginName,
-                    LoginPassword = x.LoginPassword,
+                    Email = x.Email,
+                    UserName = x.UserName,
+                    PasswordHash = x.PasswordHash,
                     PhoneNumber = x.PhoneNumber,
+                    Role = x.Role,
                     Country = x.Country,
                     City = x.City,
-                    UserCreateDate = x.UserCreateDate,
-                    UserLastUpdateDate = x.UserLastUpdateDate,
                     UserCompanies = x.UserCompanies.Select(xx => new CompanyDto
                     {
                         Id = xx.Id,

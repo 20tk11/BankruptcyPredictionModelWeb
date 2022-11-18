@@ -37,14 +37,14 @@ namespace Application.Users
                     Organization = x.Organization,
                     FirstName = x.FirstName,
                     LastName = x.LastName,
-                    EmailAddress = x.EmailAddress,
-                    LoginName = x.LoginName,
-                    LoginPassword = x.LoginPassword,
+                    Email = x.Email,
+                    UserName = x.UserName,
+                    PasswordHash = x.PasswordHash,
                     PhoneNumber = x.PhoneNumber,
                     Country = x.Country,
                     City = x.City,
-                    UserCreateDate = x.UserCreateDate,
-                    UserLastUpdateDate = x.UserLastUpdateDate,
+                    Role = x.Role,
+                    Token = x.Token,
                     UserCompanies = x.UserCompanies.Select(xx => new CompanyDto
                     {
                         Id = xx.Id,
@@ -76,7 +76,6 @@ namespace Application.Users
                     }).ToList()
                 })
                 .ToListAsync();
-
 
                 return Result<List<UserDto>>.Success(users);
             }

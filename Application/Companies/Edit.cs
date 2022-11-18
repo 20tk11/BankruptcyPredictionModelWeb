@@ -16,7 +16,9 @@ namespace Application.Companies
         public class Command : IRequest<Result<Unit>>
         {
             public Company Company { get; set; }
-            public Guid UserId { get; set; }
+            public string UserId { get; set; }
+            public string TokenUserName { get; set; }
+            public string TokenRole { get; set; }
         }
         public class CommandValidator : AbstractValidator<Command>
         {
@@ -36,6 +38,14 @@ namespace Application.Companies
 
             public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
+                var user = await _context.Users.FindAsync(request.UserId);
+                if (request.TokenRole != "Admin")
+                {
+                    if (user.UserName.ToString() != request.TokenUserName)
+                    {
+                        return Result<Unit>.Forbid("");
+                    }
+                }
                 var company = await _context.Companies.FindAsync(request.Company.Id);
                 if (company == null) return null;
 

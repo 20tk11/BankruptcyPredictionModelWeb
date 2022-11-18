@@ -13,6 +13,8 @@ namespace Application.Companies
         public class Command : IRequest<Result<Unit>>
         {
             public Guid Id { get; set; }
+            public string TokenUserName { get; set; }
+            public string TokenRole { get; set; }
         }
 
         public class Handler : IRequestHandler<Command, Result<Unit>>
@@ -28,8 +30,16 @@ namespace Application.Companies
 
             public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
-                var company = await _context.Companies.FindAsync(request.Id);
 
+                var company = await _context.Companies.FindAsync(request.Id);
+                var user = await _context.Users.FindAsync(company.UserId);
+                if (request.TokenRole != "Admin")
+                {
+                    if (user.UserName.ToString() != request.TokenUserName)
+                    {
+                        return Result<Unit>.Forbid("");
+                    }
+                }
                 if (company == null) return null;
                 _context.Remove(company);
 

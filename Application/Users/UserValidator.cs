@@ -14,12 +14,13 @@ namespace Application.Users
             RuleFor(x => x.Organization).NotEmpty();
             RuleFor(x => x.FirstName).NotEmpty();
             RuleFor(x => x.LastName).NotEmpty();
-            RuleFor(x => x.EmailAddress).NotEmpty();
-            RuleFor(x => x.LoginName).NotEmpty();
-            RuleFor(x => x.LoginPassword).NotEmpty();
+            RuleFor(x => x.Email).NotEmpty();
+            RuleFor(x => x.UserName).NotEmpty();
+            RuleFor(x => x.PasswordHash).NotEmpty();
             RuleFor(x => x.PhoneNumber).NotEmpty();
             RuleFor(x => x.Country).NotEmpty();
             RuleFor(x => x.City).NotEmpty();
+            RuleFor(x => x.Role).NotEmpty();
         }
     }
 }

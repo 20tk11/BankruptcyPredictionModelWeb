@@ -15,7 +15,9 @@ namespace Application.Companies
     {
         public class Query : IRequest<Result<List<CompanyDto>>>
         {
-            public Guid Userid { get; set; }
+            public string Userid { get; set; }
+            public string TokenUserName { get; set; }
+            public string TokenRole { get; set; }
         }
         public class Handler : IRequestHandler<Query, Result<List<CompanyDto>>>
         {
@@ -27,6 +29,14 @@ namespace Application.Companies
 
             public async Task<Result<List<CompanyDto>>> Handle(Query request, CancellationToken cancellationToken)
             {
+                var user = await _context.Users.FindAsync(request.Userid);
+                if (request.TokenRole != "Admin")
+                {
+                    if (user.UserName.ToString() != request.TokenUserName)
+                    {
+                        return Result<List<CompanyDto>>.Forbid("");
+                    }
+                }
                 var companies = await _context.Companies
                 .Where(xx => xx.UserId == request.Userid)
                 .Select(xx => new CompanyDto

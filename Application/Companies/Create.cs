@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Application.Core;
+using Application.Interfaces;
 using Domain;
 using FluentValidation;
 using MediatR;
@@ -16,7 +17,9 @@ namespace Application.Companies
         public class Command : IRequest<Result<Unit>>
         {
             public Company Company { get; set; }
-            public Guid UserId { get; set; }
+            public string UserId { get; set; }
+            public string TokenUserName { get; set; }
+            public string TokenRole { get; set; }
         }
         public class CommandValidator : AbstractValidator<Command>
         {
@@ -28,9 +31,11 @@ namespace Application.Companies
         public class Handler : IRequestHandler<Command, Result<Unit>>
         {
             private readonly DataContext _context;
+            public readonly IUserAccessor _userAccessor;
 
-            public Handler(DataContext context)
+            public Handler(DataContext context, IUserAccessor userAccessor)
             {
+                _userAccessor = userAccessor;
                 _context = context;
             }
 
@@ -38,7 +43,13 @@ namespace Application.Companies
             {
                 var user = await _context.Users.FirstOrDefaultAsync(x =>
                 x.Id == request.UserId);
-
+                if (request.TokenRole != "Admin")
+                {
+                    if (user.UserName.ToString() != request.TokenUserName)
+                    {
+                        return Result<Unit>.Forbid("");
+                    }
+                }
                 if (user == null) return Result<Unit>.Failure("Tokio naudotojo nėra");
 
                 _context.Companies.Add(request.Company);

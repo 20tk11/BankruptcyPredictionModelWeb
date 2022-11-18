@@ -17,6 +17,8 @@ namespace Application.Coefs
         {
             public Coef Coef { get; set; }
             public Guid CompanyId { get; set; }
+            public string TokenUserName { get; set; }
+            public string TokenRole { get; set; }
         }
         public class CommandValidator : AbstractValidator<Command>
         {
@@ -36,10 +38,16 @@ namespace Application.Coefs
 
             public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
-
+                var company = await _context.Companies.FirstOrDefaultAsync(x => x.Id == request.CompanyId);
+                var user = await _context.Users.FindAsync(company.UserId);
+                if (request.TokenRole != "Admin")
+                {
+                    if (user.UserName.ToString() != request.TokenUserName)
+                    {
+                        return Result<Unit>.Forbid("");
+                    }
+                }
                 _context.Coefs.Add(request.Coef);
-                var company = await _context.Companies.FirstOrDefaultAsync(x =>
-                    x.Id == request.CompanyId);
                 company.CompanyCoefs.Add(request.Coef);
                 var result = await _context.SaveChangesAsync() > 0;
 

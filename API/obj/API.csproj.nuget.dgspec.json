@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\api\\API.csproj": {}
+    "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\API\\API.csproj": {}
   },
   "projects": {
-    "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\api\\API.csproj": {
+    "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\api\\API.csproj",
+        "projectUniqueName": "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\api\\API.csproj",
+        "projectPath": "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\API\\API.csproj",
         "packagesPath": "C:\\Users\\Tomas\\.nuget\\packages\\",
-        "outputPath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\api\\obj\\",
+        "outputPath": "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -21,15 +21,14 @@
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\Application.csproj": {
-                "projectPath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\Application.csproj"
+              "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\Application.csproj": {
+                "projectPath": "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\Application.csproj"
               },
               "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Infrastructure\\Infrastructure.csproj": {
                 "projectPath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Infrastructure\\Infrastructure.csproj"
@@ -59,15 +58,27 @@
               "target": "Package",
               "version": "[9.0.0, )"
             },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.17, )"
+              "version": "[7.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.17, )"
+              "version": "[7.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -97,14 +108,14 @@
         }
       }
     },
-    "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\Application.csproj": {
+    "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\Application.csproj",
+        "projectUniqueName": "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\Application.csproj",
+        "projectPath": "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\Tomas\\.nuget\\packages\\",
-        "outputPath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\obj\\",
+        "outputPath": "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -121,8 +132,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\Domain.csproj"
+              "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\Domain.csproj": {
+                "projectPath": "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\Domain.csproj"
               },
               "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Persistence\\Persistence.csproj": {
                 "projectPath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Persistence\\Persistence.csproj"
@@ -151,6 +162,10 @@
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.25.0, )"
             }
           },
           "imports": [
@@ -173,14 +188,14 @@
         }
       }
     },
-    "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\Domain.csproj": {
+    "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\Domain.csproj",
+        "projectUniqueName": "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\Domain.csproj",
+        "projectPath": "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Tomas\\.nuget\\packages\\",
-        "outputPath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\obj\\",
+        "outputPath": "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -211,7 +226,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.1, )"
+              "version": "[5.0.0, )"
             }
           },
           "imports": [
@@ -258,8 +273,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\Application.csproj": {
-                "projectPath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\Application.csproj"
+              "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\Application.csproj": {
+                "projectPath": "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Application\\Application.csproj"
               }
             }
           }
@@ -317,8 +332,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\Domain.csproj"
+              "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\Domain.csproj": {
+                "projectPath": "d:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\Domain\\Domain.csproj"
               }
             }
           }
@@ -340,6 +355,10 @@
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[5.0.17, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [

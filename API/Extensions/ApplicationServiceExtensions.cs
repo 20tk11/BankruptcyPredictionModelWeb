@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using Persistence;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
 
 namespace API.Extensions
 {
@@ -26,7 +27,14 @@ namespace API.Extensions
             // Adding data context as a service
             services.AddDbContext<DataContext>(opt =>
             {
-                opt.UseSqlite(config.GetConnectionString("DefaultConnection"));
+                opt.UseNpgsql(config.GetConnectionString("DefaultConnection"));
+            });
+            services.AddCors(opt =>
+            {
+                opt.AddPolicy("CorsPolicy", policy =>
+                {
+                    policy.AllowAnyMethod().AllowAnyHeader().WithOrigins("http://localhost:3000");
+                });
             });
             services.AddAutoMapper(typeof(MappingProfiles).Assembly);
             services.AddMediatR(typeof(List.Handler).Assembly);

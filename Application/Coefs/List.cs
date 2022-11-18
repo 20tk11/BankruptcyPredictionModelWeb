@@ -16,8 +16,10 @@ namespace Application.Coefs
     {
         public class Query : IRequest<Result<List<CoefDto>>>
         {
-            public Guid Userid { get; set; }
+            public string Userid { get; set; }
             public Guid CompanyId { get; set; }
+            public string TokenUserName { get; set; }
+            public string TokenRole { get; set; }
         }
         public class Handler : IRequestHandler<Query, Result<List<CoefDto>>>
         {
@@ -31,6 +33,13 @@ namespace Application.Coefs
             {
                 var user = await _context.Users.FirstOrDefaultAsync(x =>
                 x.Id == request.Userid);
+                if (request.TokenRole != "Admin")
+                {
+                    if (user.UserName.ToString() != request.TokenUserName)
+                    {
+                        return Result<List<CoefDto>>.Forbid("");
+                    }
+                }
                 if (user == null) return Result<List<CoefDto>>.Failure("Tokio naudotojo nėra");
 
                 var companies = await _context.Companies
