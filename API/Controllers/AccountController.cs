@@ -33,21 +33,36 @@ namespace API.Controllers
             var user = await _userManager.FindByEmailAsync(loginDto.Email);
             if (user == null) return Unauthorized();
             var result = await _signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
-            if(user.Role == null){
-                user.Role = _tokenService.CreateToken(user);
-            }
+
             if (result.Succeeded)
             {
-                return new UserDto
+                if (user.Role == null)
                 {
-                    FirstName = user.FirstName,
-                    LastName = user.LastName,
-                    Token = user.Token,
-                    Username = user.UserName,
-                    Email = user.Email,
-                    Role = user.Role
+                    return new UserDto
+                    {
+                        FirstName = user.FirstName,
+                        LastName = user.LastName,
+                        Token = user.Token,
+                        Username = user.UserName,
+                        Email = user.Email,
+                        Role = _tokenService.CreateToken(user)
 
-                };
+                    };
+                }
+                else
+                {
+                    return new UserDto
+                    {
+                        FirstName = user.FirstName,
+                        LastName = user.LastName,
+                        Token = user.Token,
+                        Username = user.UserName,
+                        Email = user.Email,
+                        Role = user.Role
+
+                    };
+                }
+
             }
             return Unauthorized();
         }
