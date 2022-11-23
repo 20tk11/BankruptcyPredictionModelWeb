@@ -36,7 +36,7 @@ namespace API.Controllers
 
             if (result.Succeeded)
             {
-                if (user.Role == null)
+                if (user.Token == null)
                 {
                     return new UserDto
                     {
