@@ -42,10 +42,10 @@ namespace API.Controllers
                     {
                         FirstName = user.FirstName,
                         LastName = user.LastName,
-                        Token = user.Token,
+                        Token = _tokenService.CreateToken(user),
                         Username = user.UserName,
                         Email = user.Email,
-                        Role = "User"
+                        Role = user.Role
 
                     };
                 }
