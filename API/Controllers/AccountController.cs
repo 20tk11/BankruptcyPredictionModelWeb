@@ -36,32 +36,16 @@ namespace API.Controllers
 
             if (result.Succeeded)
             {
-                if (user.Token == null)
+                return new UserDto
                 {
-                    return new UserDto
-                    {
-                        FirstName = user.FirstName,
-                        LastName = user.LastName,
-                        Token = _tokenService.CreateToken(user),
-                        Username = user.UserName,
-                        Email = user.Email,
-                        Role = user.Role
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    Token = _tokenService.CreateToken(user),
+                    Username = user.UserName,
+                    Email = user.Email,
+                    Role = user.Role
 
-                    };
-                }
-                else
-                {
-                    return new UserDto
-                    {
-                        FirstName = user.FirstName,
-                        LastName = user.LastName,
-                        Token = user.Token,
-                        Username = user.UserName,
-                        Email = user.Email,
-                        Role = user.Role
-
-                    };
-                }
+                };
 
             }
             return Unauthorized();

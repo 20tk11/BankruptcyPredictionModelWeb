@@ -12,7 +12,7 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": 319949681,
+        "HashCode": 1865136394,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.Razor",
@@ -327,7 +327,7 @@
         }
       },
       {
-        "HashCode": -1969991311,
+        "HashCode": 1058101946,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -524,7 +524,7 @@
         }
       },
       {
-        "HashCode": 1206093375,
+        "HashCode": 2042005183,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.CacheTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -651,7 +651,7 @@
         }
       },
       {
-        "HashCode": -493746756,
+        "HashCode": 211392455,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.ComponentTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -706,7 +706,7 @@
         }
       },
       {
-        "HashCode": 428677144,
+        "HashCode": 947410221,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.DistributedCacheTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -838,7 +838,7 @@
         }
       },
       {
-        "HashCode": 2004851105,
+        "HashCode": -273797286,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.EnvironmentTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -884,7 +884,7 @@
         }
       },
       {
-        "HashCode": -773043462,
+        "HashCode": 1469726202,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.FormActionTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -1301,7 +1301,7 @@
         }
       },
       {
-        "HashCode": 1321297118,
+        "HashCode": -722753889,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.FormTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -1403,7 +1403,7 @@
         }
       },
       {
-        "HashCode": -1705807517,
+        "HashCode": -1239064353,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.ImageTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -1449,7 +1449,7 @@
         }
       },
       {
-        "HashCode": -70085967,
+        "HashCode": -601741214,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -1519,7 +1519,7 @@
         }
       },
       {
-        "HashCode": 1445478033,
+        "HashCode": -50039809,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.LabelTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -1552,7 +1552,7 @@
         }
       },
       {
-        "HashCode": 2072159629,
+        "HashCode": 9898030,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.LinkTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -1748,7 +1748,7 @@
         }
       },
       {
-        "HashCode": -18513697,
+        "HashCode": 2020318952,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -1776,7 +1776,7 @@
         }
       },
       {
-        "HashCode": 1425563020,
+        "HashCode": -1784489097,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -1857,7 +1857,7 @@
         }
       },
       {
-        "HashCode": -2024051444,
+        "HashCode": 335327211,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.PersistComponentStateTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -1886,7 +1886,7 @@
         }
       },
       {
-        "HashCode": -2049119932,
+        "HashCode": -517480418,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -2039,7 +2039,7 @@
         }
       },
       {
-        "HashCode": -1203228939,
+        "HashCode": 911816312,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -2098,7 +2098,7 @@
         }
       },
       {
-        "HashCode": -1663525175,
+        "HashCode": 140491951,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.TextAreaTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -2140,7 +2140,7 @@
         }
       },
       {
-        "HashCode": -1984719104,
+        "HashCode": 971693034,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.ValidationMessageTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -2173,7 +2173,7 @@
         }
       },
       {
-        "HashCode": 224584704,
+        "HashCode": 436496437,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.ValidationSummaryTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
