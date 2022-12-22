@@ -36,7 +36,6 @@ namespace API.Controllers
         {
 
             string token = HttpContext.Request.Headers["Authorization"];
-            token = "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InRvbWthbjMiLCJuYW1laWQiOiIyN2ZlMzllZS03ZGM5LTRjNjAtOGUxYy04YjBjNzJjMjNiMmMiLCJlbWFpbCI6InQua2FuYXJlbGVAZ21haWwuY29tIiwicm9sZSI6IkFkbWluIiwibmJmIjoxNjcxNDgyODE3LCJleHAiOjE2NzIwODc2MTcsImlhdCI6MTY3MTQ4MjgxN30.6MEgRNMzmx6AHTqYgExMyXqsMN_UVH28_S4rQlz-_0FKI4Yb3_dXh7OxrVNw2bCjwz18MmfdvJTtez-sJ22Qpw";
             token = token.Remove(0, 7);
             var handler = new JwtSecurityTokenHandler();
             var jwtSecurityToken = handler.ReadJwtToken(token);
@@ -56,7 +55,6 @@ namespace API.Controllers
         public async Task<IActionResult> EditUser(string id, User user)
         {
             string token = HttpContext.Request.Headers["Authorization"];
-            token = "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InRvbWthbjMiLCJuYW1laWQiOiIyN2ZlMzllZS03ZGM5LTRjNjAtOGUxYy04YjBjNzJjMjNiMmMiLCJlbWFpbCI6InQua2FuYXJlbGVAZ21haWwuY29tIiwicm9sZSI6IkFkbWluIiwibmJmIjoxNjcxNDgyODE3LCJleHAiOjE2NzIwODc2MTcsImlhdCI6MTY3MTQ4MjgxN30.6MEgRNMzmx6AHTqYgExMyXqsMN_UVH28_S4rQlz-_0FKI4Yb3_dXh7OxrVNw2bCjwz18MmfdvJTtez-sJ22Qpw";
             token = token.Remove(0, 7);
             var handler = new JwtSecurityTokenHandler();
             var jwtSecurityToken = handler.ReadJwtToken(token);
@@ -70,7 +68,6 @@ namespace API.Controllers
         public async Task<IActionResult> DeleteActivity(string id)
         {
             string token = HttpContext.Request.Headers["Authorization"];
-            token = "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InRvbWthbjMiLCJuYW1laWQiOiIyN2ZlMzllZS03ZGM5LTRjNjAtOGUxYy04YjBjNzJjMjNiMmMiLCJlbWFpbCI6InQua2FuYXJlbGVAZ21haWwuY29tIiwicm9sZSI6IkFkbWluIiwibmJmIjoxNjcxNDgyODE3LCJleHAiOjE2NzIwODc2MTcsImlhdCI6MTY3MTQ4MjgxN30.6MEgRNMzmx6AHTqYgExMyXqsMN_UVH28_S4rQlz-_0FKI4Yb3_dXh7OxrVNw2bCjwz18MmfdvJTtez-sJ22Qpw";
             token = token.Remove(0, 7);
             var handler = new JwtSecurityTokenHandler();
             var jwtSecurityToken = handler.ReadJwtToken(token);
