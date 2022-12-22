@@ -40,6 +40,7 @@ namespace Application.Users
             public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
                 var user = await _context.Users.FindAsync(request.User.Id);
+                
                 if (request.TokenRole != "Admin")
                 {
                     if (user.UserName.ToString() != request.TokenUserName)

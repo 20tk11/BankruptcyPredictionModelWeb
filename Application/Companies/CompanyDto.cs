@@ -20,7 +20,5 @@ namespace Application.Companies
         public string UserId { get; set; }
         public ICollection<CoefDto> CompanyCoefs { get; set; } = new List<CoefDto>();
         public int? BankruptcyCaseStartYear { get; set; }
-        public DateTime CompanyCreateDate { get; set; }
-        public DateTime CompanyLastUpdateDate { get; set; }
     }
 }

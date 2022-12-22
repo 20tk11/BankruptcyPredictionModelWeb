@@ -59,8 +59,6 @@ namespace Application.Coefs
                     BusinessSector = xx.BusinessSector,
                     IsBankrupt = xx.IsBankrupt,
                     UserId = xx.UserId,
-                    CompanyCreateDate = xx.CompanyCreateDate,
-                    CompanyLastUpdateDate = xx.CompanyLastUpdateDate,
                 })
                 .ToListAsync();
                 if (companies.Capacity == 0) return Result<CoefDto>.Failure("Naudotojas tokios Įmones neturi");

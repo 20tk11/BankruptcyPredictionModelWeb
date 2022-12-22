@@ -59,18 +59,16 @@ namespace Application.Companies
                 company.DeregistrationYear = request.Company.DeregistrationYear ?? company.DeregistrationYear;
                 if (request.Company.BusinessSector != 0)
                 {
-                    company.BusinessSector = company.BusinessSector;
+                    company.BusinessSector = request.Company.BusinessSector;
                 }
-                if (request.Company.IsBankrupt != 0)
-                {
+
                     company.IsBankrupt = request.Company.IsBankrupt;
-                }
+
                 company.UserId = request.UserId;
                 company.BankruptcyCaseStartYear = request.Company.BankruptcyCaseStartYear ?? company.BankruptcyCaseStartYear;
 
                 var result = await _context.SaveChangesAsync() > 0;
                 if (!result) return Result<Unit>.Failure("Failed to update user");
-                company.CompanyLastUpdateDate = DateTime.Now;
                 await _context.SaveChangesAsync();
                 // Equivalent to nothing
                 return Result<Unit>.Success(Unit.Value);

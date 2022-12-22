@@ -1,24 +1,61 @@
-import React, { Fragment, useEffect, useState } from 'react';
-import { Container, Header, List } from 'semantic-ui-react';
+import React, { Fragment, useEffect } from 'react';
+import { Container } from 'semantic-ui-react';
 import NavBar from './NavBar';
-import UserDashboard from '../../features/users/dashboard/UserDasgboard';
-import { Route, Routes } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
+import { observer } from 'mobx-react-lite';
 import HomePage from '../../features/home/HomePage';
+import { useStore } from '../stores/store';
+import UserStore from '../stores/userStore';
+import LoadingComponent from './loading';
+import ModalContainer from '../common/form/ModalContainer';
+import { createMedia } from '@artsy/fresnel';
+const AppMedia = createMedia({
+  breakpoints: {
+    mobile: 0,
+    mobileEnd: 720,
+
+  }
+});
+const mediaStyles = AppMedia.createMediaStyle();
+const { Media, MediaContextProvider } = AppMedia;
 
 function App() {
-  
-
+  const location = useLocation();
+  const { commonStore, userStore } = useStore();
+  let role: string = '';
+  let nameid: string = '';
+  const token = localStorage.getItem('jwt')
+  if (token) {
+    role = JSON.parse(atob(token.split('.')[1]))["role"]
+    nameid = JSON.parse(atob(token.split('.')[1]))["nameid"]
+  }
+  localStorage.setItem('role', role);
+  localStorage.setItem('nameid', nameid);
+  useEffect(() => {
+    if (commonStore.token) {
+      userStore.userGetter().finally(() => commonStore.setAppLoaded())
+    } else {
+      commonStore.setAppLoaded();
+    }
+  }, [commonStore, userStore])
+  if (!commonStore.appLoaded) return <LoadingComponent content='Loading app' />
   return (
+
     <Fragment>
-      <NavBar/>
-      <Container style={{marginTop:'7em'}}>
-        <Routes>
-          <Route path='/' element={<HomePage />} />
-          <Route path='/users' element={<UserDashboard />} />
-        </Routes>
-      </Container>
+      <style>{mediaStyles}</style>
+      <ModalContainer />
+      {location.pathname === '/' ? <HomePage /> : (
+        <>
+          <MediaContextProvider>
+            <NavBar Media={Media} />
+          </MediaContextProvider>
+          <Container style={{ marginTop: '7em' }}>
+            <Outlet />
+          </Container>
+        </>
+      )}
     </Fragment>
   );
 }
 
-export default App;
+export default observer(App);

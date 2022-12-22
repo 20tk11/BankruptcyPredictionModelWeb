@@ -18,7 +18,5 @@ namespace Domain
         public string UserId { get; set; }
         public ICollection<Coef> CompanyCoefs { get; set; } = new List<Coef>();
         public int? BankruptcyCaseStartYear { get; set; }
-        public DateTime CompanyCreateDate { get; set; }
-        public DateTime CompanyLastUpdateDate { get; set; }
     }
 }

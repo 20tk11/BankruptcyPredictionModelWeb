@@ -1,47 +1,39 @@
-import React from "react";
-import { Button,  Item, Label,  Segment } from "semantic-ui-react";
-import { User } from "../../../app/models/user";
+import { observer } from "mobx-react-lite";
+import React, { Fragment, SyntheticEvent, useState } from "react";
+import { Link } from "react-router-dom";
+import { Button, Header, Item, Label, Segment } from "semantic-ui-react";
+import { useStore } from "../../../app/stores/store";
+import UserListItem from "./UserListItem";
 
-interface Props {
-    users: User[];
-}
-export default function UserList({users}: Props){
+
+export default observer(function UserList() {
+
+
+    const { userStore } = useStore();
+    const { groupedUsers } = userStore;
+    // const temp = groupedUsers[0];
+    // groupedUsers[0] = groupedUsers[1];
+    // groupedUsers[1] = temp;
+    console.log(groupedUsers.sort((a, b) => (a[0].toLowerCase() > b[0].toLowerCase()) ? 1 : ((a[0].toLowerCase() < b[0].toLowerCase()) ? -1 : 0)));
     return (
-        <Segment>
-            <Item.Group divided >
-                {users.map(user =>(
-                    <Item key={user.id}>
-                        <Item.Content>
-                            <Item.Header as='a'>{user.firstName + ' ' + user.lastName}</Item.Header>
-                            <Item.Meta>{user.emailAddress}</Item.Meta>
-                            <Item.Description>
-                            <div className="row">
-                                <div className="column_left">
-                                    <div className="text">{"Organization: "}</div>
-                                    <div className="text">{"Phone Number: "}</div>
-                                    <div className="text">{"Country: "}</div>
-                                    <div className="text">{"City: "}</div>
-                                    <div className="text">{"User Create Date: "}</div>
-                                    <div className="text">{"User Update Date "}</div>
-                                </div>
-                                <div className="column_right">
-                                    <div className="text">{user.organization}</div>
-                                    <div className="text">{user.phoneNumber}</div>
-                                    <div className="text">{user.country}</div>
-                                    <div className="text">{user.city}</div>
-                                    <div className="text">{user.userCreateDate.toString()}</div>
-                                    <div className="text">{user.userLastUpdateDate.toString()}</div>
-                                </div>
-                            </div>
-                            </Item.Description>
-                            <Item.Extra>
-                                <Button floated='right' content='View' color='blue'/>
-                                <Label basic content={"Admin"}></Label>
-                            </Item.Extra>
-                        </Item.Content>
-                    </Item>
-                ))}
-            </Item.Group>
-        </Segment>
+        <>
+            {groupedUsers.sort((a, b) => (a[0].toLowerCase() > b[0].toLowerCase()) ? 1 : ((a[0].toLowerCase() < b[0].toLowerCase()) ? -1 : 0)).map(([group, users]) => (
+                <Fragment key={group}>
+                    <Header sub color='teal'>
+                        {group}
+                    </Header>
+                    <Segment>
+                        <Item.Group divided >
+                            {users.map(user => (
+                                <UserListItem key={user.id} user={user} />
+                            ))}
+                        </Item.Group>
+                    </Segment>
+                </Fragment>
+            ))}
+
+
+        </>
+
     )
-}
+})

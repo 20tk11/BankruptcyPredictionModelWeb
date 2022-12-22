@@ -68,8 +68,6 @@ namespace Application.Users
                         BusinessSector = xx.BusinessSector,
                         IsBankrupt = xx.IsBankrupt,
                         UserId = xx.UserId,
-                        CompanyCreateDate = xx.CompanyCreateDate,
-                        CompanyLastUpdateDate = xx.CompanyLastUpdateDate,
                         CompanyCoefs = xx.CompanyCoefs.Select(xxx => new CoefDto
                         {
                             Id = xxx.Id,

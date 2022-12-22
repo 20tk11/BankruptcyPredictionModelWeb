@@ -15,7 +15,6 @@ namespace Application.Companies
             RuleFor(x => x.Name).NotEmpty();
             RuleFor(x => x.RegistrationYear).NotEmpty();
             RuleFor(x => x.BusinessSector).NotEmpty();
-            RuleFor(x => x.IsBankrupt).NotEmpty();
         }
     }
 }

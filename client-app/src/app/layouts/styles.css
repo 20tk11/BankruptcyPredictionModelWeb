@@ -39,3 +39,15 @@ body {
   display:inline;
   float: right;
 }
+.ui.items>.item{
+  display: inline-block;
+}
+
+.ui.grid>* {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+.ui.menu {
+  border-bottom: 0 none !important;
+  box-shadow: none;
+}

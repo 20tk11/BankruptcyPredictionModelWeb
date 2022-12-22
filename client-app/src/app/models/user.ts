@@ -1,16 +1,23 @@
 export interface User {
     id: string;
-    organization: string;
+    organization?: string;
     firstName: string;
     lastName: string;
-    emailAddress: string;
-    loginName: string;
-    loginPassword: string;
-    phoneNumber: string;
-    country: string;
-    city: string;
-    userCompanies: any[];
-    userCreateDate: Date;
-    userLastUpdateDate: Date;
+    email: string;
+    userName: string;
+    phoneNumber?: string;
+    country?: string;
+    city?: string;
+    role: string;
+    token: string | null;
+}
+
+export interface UserFormValues {
+    email: string;
+    password: string;
+    userName?: string;
+    firstName?: string;
+    lastName?: string;
+
 }
 
