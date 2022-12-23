@@ -15,6 +15,7 @@ using Persistence;
 
 namespace API.Controllers
 {
+
     [ApiController]
     [Route("api/users")]
     public class UsersController : BaseApiController

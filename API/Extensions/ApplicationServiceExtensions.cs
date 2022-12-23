@@ -27,7 +27,7 @@ namespace API.Extensions
             // Adding data context as a service
             services.AddDbContext<DataContext>(options =>
             {
-                options.UseNpgsql(config.GetConnectionString("DefaultConnection"));
+                options.UseNpgsql("Server=40.71.8.203;Port=5432;Userid=adminas@bankruptcypostgres;Password=Tomas123;Database=postgres;");
             });
 
             services.AddCors(opt =>

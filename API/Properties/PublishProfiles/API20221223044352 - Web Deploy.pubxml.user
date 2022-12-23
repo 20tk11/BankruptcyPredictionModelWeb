@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAy2b+naapTkKMKfo/XjHpLQAAAAACAAAAAAAQZgAAAAEAACAAAABK9KGkdwnY0dUimPiiOQAzzojwqgfFx2oIWukno/0LEwAAAAAOgAAAAAIAACAAAAA3Sg+L8kDI+EfP+D15u9hloFlgTan+grxSNQZv21MRDYAAAACteCUJzasjuKAHx3q5++xZKGLChaLZdu9iUVns867eTJ5/86T3QXwZQQHN48JmtURPFblHE8cYXHOjolNPd+zsrHwk77uHhH/3TvntYR2RIMldaeKT0I8XMbSHrXtmdO9jSGFLCAVdgUsqIYlXMqAiI57x9OhyR5ndop/8ITuaI0AAAACEZdEpisUepOSZKIXPTkB2EtOukRPRL0Avszulgqs7g95gW7/O1FjbtClmBfbVW12ITMwTdA5fuNSSKXtJb4kT</EncryptedPassword>
+    <History>True|2022-12-23T04:56:39.0109522Z;True|2022-12-23T07:50:47.2307231+03:00;True|2022-12-23T07:14:57.5842327+03:00;True|2022-12-23T07:12:56.2737567+03:00;True|2022-12-23T06:48:32.6623048+03:00;True|2022-12-23T06:30:09.8899824+03:00;True|2022-12-23T05:55:20.3439711+03:00;True|2022-12-23T04:58:05.7803472+03:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=40.71.8.203%3bDatabase=postgres%3bPort=5432%3bUsername=adminas%40bankruptcypostgres%3bPassword=Tomas123%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

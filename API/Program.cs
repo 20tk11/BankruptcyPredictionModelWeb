@@ -30,7 +30,7 @@ namespace API
                 var context = services.GetRequiredService<DataContext>();
                 // Applies any pending migration for the context to the database. will create a database if it does not already exist.
                 var userManager = services.GetRequiredService<UserManager<User>>();
-                // await context.Database.MigrateAsync();
+                //await context.Database.MigrateAsync();
                 await Seed.SeedData(context, userManager);
             }
             catch (Exception ex)

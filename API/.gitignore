@@ -10,8 +10,7 @@
 
 # production
 /build
-appsettings.Development.json
-appsettings.json
+
 # misc
 .DS_Store
 .env.local
