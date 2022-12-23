@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\api\\API.csproj": {}
+    "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\API\\API.csproj": {}
   },
   "projects": {
-    "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\api\\API.csproj": {
+    "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\api\\API.csproj",
+        "projectUniqueName": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\api\\API.csproj",
+        "projectPath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\API\\API.csproj",
         "packagesPath": "C:\\Users\\Tomas\\.nuget\\packages\\",
-        "outputPath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\api\\obj\\",
+        "outputPath": "D:\\Universitetas\\4 kursas\\1 sem\\Saitynai\\Bankroto modelis\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
