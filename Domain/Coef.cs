@@ -19,7 +19,5 @@ namespace Domain
         public double? NOR_1B_2 { get; set; }
         public Company Company { get; set; }
         public Guid CompanyId { get; set; }
-        public DateTime CoefCreateDate { get; set; }
-        public DateTime CoefLastUpdateDate { get; set; }
     }
 }

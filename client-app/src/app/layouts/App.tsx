@@ -9,6 +9,7 @@ import UserStore from '../stores/userStore';
 import LoadingComponent from './loading';
 import ModalContainer from '../common/form/ModalContainer';
 import { createMedia } from '@artsy/fresnel';
+import Footer from './footer';
 const AppMedia = createMedia({
   breakpoints: {
     mobile: 0,
@@ -52,6 +53,7 @@ function App() {
           <Container style={{ marginTop: '7em' }}>
             <Outlet />
           </Container>
+          <Footer />
         </>
       )}
     </Fragment>

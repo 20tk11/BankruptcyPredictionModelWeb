@@ -11,24 +11,30 @@ import CompanyForm from "../../features/users/form/CompanyForm";
 import UserForm from "../../features/users/form/UserForm";
 import LoginForm from "../../features/users/LoginForm";
 import App from "../layouts/App";
+import RequireAuth from "./RequireAuth";
 
 export const routes: RouteObject[] = [
     {
         path: '/',
         element: <App />,
         children: [
-            { path: '', element: <HomePage /> },
-            { path: 'users', element: <UserDasgboard /> },
-            { path: 'users/:id', element: <UserDetails /> },
-            { path: 'createUser', element: <UserForm key='create' /> },
-            { path: 'editUser/:id', element: <UserForm key='manage' /> },
-            { path: 'login', element: <LoginForm /> },
-            { path: 'companies', element: <CurrentCompany /> },
-            { path: 'users/:id/companies/:companyid', element: <CompanyDetails /> },
-            { path: 'editCompany/user/:id/company/:companyId', element: <CompanyForm key='manage' /> },
-            { path: 'createCompany/user/:id', element: <CompanyForm key='create' /> },
-            { path: 'myCompanies', element: <MyCompanies /> },
-            { path: 'mainPage', element: <MainPage /> },
+            {
+                element: <RequireAuth />, children: [
+                    { path: '', element: <HomePage /> },
+                    { path: 'users', element: <UserDasgboard /> },
+                    { path: 'users/:id', element: <UserDetails /> },
+                    { path: 'createUser', element: <UserForm key='create' /> },
+                    { path: 'editUser/:id', element: <UserForm key='manage' /> },
+                    { path: 'login', element: <LoginForm /> },
+                    { path: 'companies', element: <CurrentCompany /> },
+                    { path: 'users/:id/companies/:companyid', element: <CompanyDetails /> },
+                    { path: 'editCompany/user/:id/company/:companyId', element: <CompanyForm key='manage' /> },
+                    { path: 'createCompany/user/:id', element: <CompanyForm key='create' /> },
+                    { path: 'myCompanies', element: <MyCompanies /> },
+                    { path: 'mainPage', element: <MainPage /> }
+                ]
+            },
+
         ]
     }
 ]

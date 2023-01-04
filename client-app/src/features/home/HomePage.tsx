@@ -10,7 +10,7 @@ import RegisterForm from "../users/RegisterForm";
 export default observer(function HomePage() {
     const { userStore, modalStore } = useStore();
     return (
-        <Segment inverted textAlign='center' className='masthead' vertical  >
+        <Segment className="footer" inverted textAlign='center' vertical  >
             <Container style={{ margin: '30.4em' }}>
                 {/* <h1>Home Page</h1> */}
                 {/* <Menu.Item as={NavLink} to='/users' header>

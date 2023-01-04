@@ -73,7 +73,7 @@ export default class UserStore {
             }, {} as { [key: string]: User[] })
         )
     }
-
+    
     loadUsers = async () => {
         this.setLoadingInitial(true);
         try {

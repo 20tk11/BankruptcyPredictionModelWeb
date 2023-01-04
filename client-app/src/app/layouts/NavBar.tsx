@@ -2,7 +2,7 @@ import { createMedia } from "@artsy/fresnel";
 import { observer } from "mobx-react-lite";
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Button, Container, Dropdown, Icon, Menu } from "semantic-ui-react";
+import { Button, Container, Divider, Dropdown, Grid, Header, Icon, List, Menu, Segment, Image } from "";
 import internal from "stream";
 import { useStore } from "../stores/store";
 
@@ -65,14 +65,16 @@ export default observer(function NavBar({ Media }: any) {
                             <Icon className="user" spaced='right' />
                             <Dropdown pointing='top left' text={currentUser?.firstName + ' ' + currentUser?.lastName}>
                                 <Dropdown.Menu>
-                                    <Dropdown.Item as={Link} to={`/profile/${currentUser?.id}`} text='My Profile' />
+                                    <Dropdown.Item as={Link} to={`/users/${name_id}`} text='My Profile' />
                                     <Dropdown.Item onClick={logout} text='Logout' icon='power' />
                                 </Dropdown.Menu>
                             </Dropdown>
                         </Menu.Item>
                     </Container>
                 </Menu>
-            </Media></>
+            </Media>
+            
+        </>
     )
 })
 

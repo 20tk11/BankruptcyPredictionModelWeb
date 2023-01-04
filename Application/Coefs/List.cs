@@ -75,8 +75,6 @@ namespace Application.Coefs
                     NOR_1B_1 = xx.NOR_1B_1,
                     NOR_1B_2 = xx.NOR_1B_2,
                     CompanyId = xx.CompanyId,
-                    CoefCreateDate = xx.CoefCreateDate,
-                    CoefLastUpdateDate = xx.CoefLastUpdateDate
 
                 })
                 .ToListAsync();

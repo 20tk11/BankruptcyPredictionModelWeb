@@ -10,7 +10,7 @@ import RegisterForm from "../users/RegisterForm";
 export default observer(function MainPage() {
     return (
         <Container style={{ margin: '30.4em' }}>
-            <Image src='https://react.semantic-ui.com/images/wireframe/image.png' fluid />
+            <Image src='/assets/logo.png' fluid />
         </Container>
 
     )

@@ -84,7 +84,6 @@ namespace Application.Coefs
 
                 var result = await _context.SaveChangesAsync() > 0;
                 if (!result) return Result<Unit>.Failure("Jau atnaujinta pagal tokią specifikaciją");
-                coef.CoefLastUpdateDate = DateTime.Now;
                 await _context.SaveChangesAsync();
                 // Equivalent to nothing
                 return Result<Unit>.Success(Unit.Value);

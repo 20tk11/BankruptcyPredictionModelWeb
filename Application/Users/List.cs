@@ -68,8 +68,6 @@ namespace Application.Users
                             NOR_1B_1 = xxx.NOR_1B_1,
                             NOR_1B_2 = xxx.NOR_1B_2,
                             CompanyId = xxx.CompanyId,
-                            CoefCreateDate = xxx.CoefCreateDate,
-                            CoefLastUpdateDate = xxx.CoefLastUpdateDate
                         }).ToList()
                     }).ToList()
                 })
